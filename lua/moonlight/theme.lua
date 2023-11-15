@@ -52,9 +52,9 @@ theme.loadSyntax = function ()
 
   -- Italic strings
   if vim.g.moonlight_italic_strings == true then
-    syntax.String = { fg = moonlight.green, bg = moonlight.none, style= 'italic' }, -- Any string
+    syntax.String = { fg = moonlight.green, bg = moonlight.none, style = 'italic' } -- Any string
   else
-    syntax.String = { fg = moonlight.green, bg = moonlight.none }, -- Any string
+    syntax.String = { fg = moonlight.green, bg = moonlight.none } -- Any string
   end
 
   -- Italic comments
