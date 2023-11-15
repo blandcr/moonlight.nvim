@@ -1,6 +1,8 @@
-# 🌘 shaunsingh/moonlight.nvim
+# 🌘 blandcr/moonlight.nvim
 
-## Modified version of Marko Cerovac's [Material.nvim](https://github.com/marko-cerovac/material.nvim), based off of the [Moonlight Theme](https://github.com/atomiks/moonlight-vscode-theme) for VSCode 
+## Modifed from Shaun Singh's [moonlight.nvim](https://github/com/shaunsingh/moonlight.nvim)
+
+## Modified version of Marko Cerovac's [Material.nvim](https://github.com/marko-cerovac/material.nvim), based off of the [Moonlight Theme](https://github.com/atomiks/moonlight-vscode-theme) for VSCode
 
 ![preview github](https://user-images.githubusercontent.com/71196912/118175481-27755c80-b3fe-11eb-9d70-85a9f936c33d.png)
 
@@ -42,18 +44,18 @@ added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-trees
 Install via your favourite package manager:
 ```vim
 " If you are using Vim-Plug
-Plug 'shaunsingh/moonlight.nvim'
+Plug 'blandcr/moonlight.nvim'
 ```
 
 ```lua
 -- If you are using Packer
-use 'shaunsingh/moonlight.nvim'
+use 'blandcr/moonlight.nvim'
 ```
 
 ## 🌓 Usage
 
 Enable the colorscheme:
-```vim 
+```vim
 "Vim-Script:
 colorscheme moonlight
 ```
@@ -80,13 +82,14 @@ require('lualine').setup {
 
 | Option                              | Default     | Description                                                                                                                                                     |
 | ----------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| moonlight_italic_comments            | `false`     | Make comments italic                                                                                                                                            |
-| moonlight_italic_keywords            | `false`     | Make keywords italic                                                                                                                                            |
-| moonlight_italic_functions           | `false`     | Make functions italic                                                                                                                                           |
-| moonlight_italic_variables           | `false`     | Make variables and identifiers italic                                                                                                                           |
-| moonlight_contrast                   | `true`      | Make sidebars and popup menus like nvim-tree and telescope have a different background                                                                                       |
-| moonlight_borders                    | `false`     | Enable the border between verticaly split windows visable
-| moonlight_disable_background         | `false`     | Disable the setting of background color so that NeoVim can use your terminal background
+| moonlight_italic_comments           | `false`     | Make comments italic                                                                                                                                            |
+| moonlight_italic_keywords           | `false`     | Make keywords italic                                                                                                                                            |
+| moonlight_italic_functions          | `false`     | Make functions italic                                                                                                                                           |
+| moonlight_italic_variables          | `false`     | Make variables and identifiers italic                                                                                                                           |
+| moonlight_italic_strings            | `false`     | Make strings italic                                                                                                                                             |
+| moonlight_contrast                  | `true`      | Make sidebars and popup menus like nvim-tree and telescope have a different background                                                                          |
+| moonlight_borders                   | `false`     | Enable the border between verticaly split windows visable                                                                                                       |
+| moonlight_disable_background        | `false`     | Disable the setting of background color so that NeoVim can use your terminal background                                                                         |
 
 ```lua
 -- Example config in lua
@@ -94,8 +97,9 @@ vim.g.moonlight_italic_comments = true
 vim.g.moonlight_italic_keywords = true
 vim.g.moonlight_italic_functions = true
 vim.g.moonlight_italic_variables = false
+vim.g.moonlight_italic_strings = false
 vim.g.moonlight_contrast = true
-vim.g.moonlight_borders = false 
+vim.g.moonlight_borders = false
 vim.g.moonlight_disable_background = false
 
 -- Load the colorscheme
@@ -108,8 +112,9 @@ let g:moonlight_italic_comments = true
 let g:moonlight_italic_keywords = true
 let g:moonlight_italic_functions = true
 let g:moonlight_italic_variables = false
+let g:moonlight_italic_strings = false
 let g:moonlight_contrast = true
-let g:moonlight_borders = false 
+let g:moonlight_borders = false
 let g:moonlight_disable_background = false
 
 -- Load the colorsheme

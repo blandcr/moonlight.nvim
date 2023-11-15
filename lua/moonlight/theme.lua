@@ -3,14 +3,12 @@ local moonlight = require("moonlight.colors")
 local theme = {}
 
 theme.loadSyntax = function ()
-    -- Syntax highlight groups
-
+  -- Syntax highlight groups
   local syntax = {
     Type =            { fg = moonlight.purple }, -- int, long, char, etc.
     StorageClass =    { fg = moonlight.cyan }, -- static, register, volatile, etc.
     Structure =       { fg = moonlight.puple }, -- struct, union, enum, etc.
     Constant =        { fg = moonlight.yellow }, -- any constant
-    String =          { fg = moonlight.green, bg = moonlight.none, style= 'italic' }, -- Any string
     Character =       { fg = moonlight.orange }, -- any character constant: 'c', '\n'
     Number =          { fg = moonlight.orange }, -- a number constant: 5
     Boolean =         { fg = moonlight.orange }, -- a boolean constant: TRUE, false
@@ -51,6 +49,13 @@ theme.loadSyntax = function ()
   }
 
   -- Options:
+
+  -- Italic strings
+  if vim.g.moonlight_italic_strings == true then
+    syntax.String = { fg = moonlight.green, bg = moonlight.none, style= 'italic' }, -- Any string
+  else
+    syntax.String = { fg = moonlight.green, bg = moonlight.none }, -- Any string
+  end
 
   -- Italic comments
   if vim.g.moonlight_italic_comments == true then
@@ -287,7 +292,6 @@ theme.loadTreeSitter = function ()
   end
 
   return treesitter
-
 end
 
 
