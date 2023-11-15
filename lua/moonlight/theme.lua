@@ -83,9 +83,9 @@ theme.loadSyntax = function ()
   end
 
   if vim.g.moonlight_italic_variables == true then
-    Identifier = {fg = moonlight.gray, bg = moonlight.none, style = 'italic'}; -- any variable name
+    syntax.Identifier = {fg = moonlight.gray, bg = moonlight.none, style = 'italic'}; -- any variable name
   else
-    Identifier = {fg = moonlight.gray}; -- any variable name
+    syntax.Identifier = {fg = moonlight.gray}; -- any variable name
   end
 
   return syntax
